@@ -4,15 +4,15 @@ window.onload = function() {
     var ui = new CnvUI({elem:"#canvas", width:320, height:260,
                         foreground:"#009", background:"#ededed", lineWidth:3});
     
-    ui.set({type:"label", align:"left", x:5, y:5, value:"CnvUI v" + ui.version});
-
+    ui.set({type:"label", align:"left", x:5, y:5, width:100, value:"CnvUI v" + ui.version});
+    
     ///// Panel /////
     var panel = ui.set({type:"panel", x:20, y:30, width:280, height:200,
                         background:"#dcdcdc"});
     
     
     ///// VSlider /////
-    var label0 = panel.set({id:"vslider-label", type:"label", x:45, y:30, width:40,
+    var label0 = panel.set({id:"vslider-label", type:"label", x:45, y:30,
                             align:"center", value:"40"});
     
     var vslider = panel.set({id:"vslider", type:"vslider", x:40, y:55,
@@ -30,7 +30,7 @@ window.onload = function() {
     
     
     ///// Knob /////
-    var label1 = panel.set({type:"label", x:105, y:30, width:50,
+    var label1 = panel.set({type:"label", x:105, y:30,
                             align:"center", value:"50"});
     var knob1 = panel.set({type:"knob", x:105, y:95,
                            value:40, change:function(value) {
@@ -46,7 +46,7 @@ window.onload = function() {
                align:"center", value:"knob"});
     
     
-    var label2 = panel.set({type:"label", x:165, y:30, width:50,
+    var label2 = panel.set({type:"label", x:165, y:30,
                             align:"center", value:"0"});
     var knob2 = panel.set({type:"knob", x:165, y:95, max:5,
                            value:0, change:function(value) {
@@ -63,7 +63,7 @@ window.onload = function() {
     
     
     ///// Switch /////
-    var label3 = panel.set({type:"label", x:225, y:30, width:50,
+    var label3 = panel.set({type:"label", x:225, y:30,
                             align:"center", value:"OFF"});
     var sw = panel.set({type:"switch", x:220, y:80, max:5,
                         value:0, change:function(value) {
