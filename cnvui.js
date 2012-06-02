@@ -1,6 +1,6 @@
 /**
  * cnvui.js
- * version: 0.1.3
+ * version: 0.1.4
  */
 var CnvUI = (function() {
     "use strict";
@@ -21,7 +21,7 @@ var CnvUI = (function() {
         }, $this = Widget.prototype;
         
         var initialize = function(ui, opts) {
-            this.version = "0.1.3";
+            this.version = "0.1.4";
             this.ui = ui;
             this.id = opts.id;
             this.x  = (ui.x + opts.x) || 0;
@@ -71,6 +71,8 @@ var CnvUI = (function() {
         
         var initialize = function(ui, opts) {
             Widget.call(this, ui, opts);
+            this.width  = opts.width  || 320;
+            this.height = opts.height || 240;
             this.widgets = [];
             this.draw();
         };
@@ -113,6 +115,7 @@ var CnvUI = (function() {
             Widget.call(this, ui, opts);
             this.align = opts.align || "left";
             this.value = opts.value || "";
+            this.width = opts.width || 50;
             this.draw();
         };
         
