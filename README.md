@@ -1,5 +1,5 @@
 # CnvUI
-A tiny UI based on CanvasElement
+A tiny UI based on HTMLCanvasElement
 
 ## Dependencies
 [http://jquery.com/](jQuery) ( CnvUI is using $.fn.offset )
