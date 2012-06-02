@@ -7,5 +7,8 @@ A tiny UI based on HTMLCanvasElement
 ## License
 MIT License
 
+## Documents
+[http://mohayonao.github.com/CnvUI/](here)
+
 ## Author
 [http://mohayonao.herokuapp.com/](mohayonao)
