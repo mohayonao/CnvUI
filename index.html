@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>cnvui.js</title>
+    <link type="text/css" media="screen" rel="stylesheet" href="css/prettify.css" />
+    <script type="text/javascript" src="cnvui.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+      #canvas { float:left; }
+      header  { float:left; padding:15px; }
+      #doc    { clear:both; }      
+      h1 { font-size:128px; margin:0px; padding:0px; }
+      section { padding:25px; }
+      h2:before { content:"■ " }
+      h3 { margin:0px; }
+      footer { color:#666; margin:10px 5px; font-size:12px; }
+      .prettyprint {
+        margin-top:0px;padding:10px !important;background:rgba(255,255,255,0.75);
+        font-family: 'Courier New', monospace; font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <header>
+      <h1>CnvUI</h1>
+      A tiny UI based on CanvasElement
+    </header>
+    <section id="doc">
+      <h2>Dependencies</h2>
+      <a href="http://jquery.com/" target="ex">jQuery</a> ( CnvUI is using $.fn.offset )
+
+      <h2>License</h2>
+      MIT License
+      
+      <h2>Author</h2>
+      <a href="http://mohayonao.herokuapp.com/" target="ex">mohayonao</a>
+      
+      <h2>API</h2>
+      <h3>Root UI</h3>
+      <pre class="prettyprint">
+var ui = new CnvUI({elem:"#canvas", width:0, height:0,
+                    background:"white", foreground:"black", lineWidth:2})</pre>
+      
+      <h3>Panel</h3>
+      <pre class="prettyprint">
+(panel || ui).set({type:"panel", x:0, y:0, width:280, height:200,
+                   background:"white", foreground:"black", lineWidth:2});</pre>
+
+      <h3>Label</h3>
+      <pre class="prettyprint">
+(panel || ui).set({type:"label", x:0, y:0, width:280,
+                   align:"left", value:""}).update("hello, CnvUI!!");</pre>
+
+      <h3>VSlider</h3>
+      <pre class="prettyprint">
+(panel || ui).set({type:"vslider", x:0, y:0, width:10, height:80,
+                   min:0, max:100, value:0, change:function(value) {
+                       console.log(this.value);
+                   }}).update(100);</pre>
+
+      <h3>Knob</h3>
+      <pre class="prettyprint">
+(panel || ui).set({type:"knob", x:0, y:0, radius:20,
+                   min:0, max:100, value:0, change:function(value) {
+                       console.log(this.value);
+                   }}).update(100);</pre>
+
+      <h3>Switch</h3>
+      <pre class="prettyprint">
+(panel || ui).set({type:"switch", x:0, y:0, width:10, height:30,
+                   value:false, change:function(value) {
+                       console.log(this.value);
+                   }}).update(true);</pre>
+      
+    </section>
+    
+    <footer>
+      2012 CnvUI - A tiny UI based on CanvasElement
+    </footer>
+  </body>
+  <script type="text/javascript" src="js/prettify.js"></script>
+  <script type="text/javascript">prettyPrint();</script>
+</html>
